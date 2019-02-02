@@ -39,7 +39,7 @@ client.on('message', msg => {
         if (msg.content === 'b!avatar') {
 		let memberok = msg.mentions.members.first();
 		const embed = new Discord.RichEmbed()
-           .setTitle(`Аватар пользователя ${memberok.username}`)
+           .setDescription(`Аватар пользователя ${memberok}`)
            .setImage(memberok.avatarURL)
            .setColor("#e3caa0")
            msg.channel.send({embed})
