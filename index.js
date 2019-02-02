@@ -35,7 +35,7 @@ if(message.content == "b!play"){
 	.setAuthor("BeepBot", "https://cdn.discordapp.com/attachments/358311606699950081/541241909201469470/1_7.PNG")
         .setDescription("Я присоединился к голосовому каналу и включил музыку.")
         .setColor("#42f4aa")
-message.channel.send({embed})}
+message.channel.send({embed})
 })
 
 client.on('message', msg => {
