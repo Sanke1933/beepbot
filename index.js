@@ -20,9 +20,10 @@ client.on('message', message => {
 client.on('message', (message)=>{
 if(message.content == "b!join"){
 	message.member.voiceChannel.join()
-const embed = new Discord.RichEmbed()
-.setDescription("Я присоединился к голосовому каналу.")
-.setColor("#42f4aa")
+    const embed = new Discord.RichEmbed()
+	.setAuthor("BeepBot", "https://cdn.discordapp.com/attachments/358311606699950081/541241909201469470/1_7.PNG")
+        .setDescription("Я присоединился к голосовому каналу.")
+        .setColor("#42f4aa")
 message.channel.send({embed})}
 })
 
