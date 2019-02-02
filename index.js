@@ -44,5 +44,5 @@ client.on('message', msg => {
     .setColor("#42f4aa")
     msg.channel.send({embed});
 		msg.react("✅");
-    }
-})
+    };
+});
