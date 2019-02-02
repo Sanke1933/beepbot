@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 let p = 'b!'
+let d = message.member.joinedAt;
 let timen = d.toLocaleString();
 
 // 0 - Играть, 1 - Стримить, 2 - Слушать, 3 - Смотреть
