@@ -17,6 +17,11 @@ client.on('message', message => {
     const command = args.shift().toLowerCase();
 })
 
+client.on('message', (message)=>{
+if(message.content == "b!join")
+{message.member.voiceChannel.join()}
+}
+
 client.on('message', msg => {
 	if (msg.content === 'b!help') {
 	const embed = new Discord.RichEmbed()
