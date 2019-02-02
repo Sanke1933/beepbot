@@ -40,7 +40,7 @@ client.on('message', msg => {
 	if (msg.content === 'b!help') {
 	const embed = new Discord.RichEmbed()
 	.setAuthor("BeepBot", "https://cdn.discordapp.com/attachments/358311606699950081/541241909201469470/1_7.PNG")
-	.addField("Команды", "``b!help`` - помощь.")
+	.addField("Информация", "``b!si`` - информация о сервере.")
 	.addField("Создатель", "<@341988428457705482> (``@freezer. ⛧#4232``)")
 	.setFooter(`${client.guilds.size} серверов`)
     .setColor("#42f4aa")
