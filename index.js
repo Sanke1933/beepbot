@@ -43,6 +43,7 @@ client.on('message', msg => {
            .setImage(memberok.avatarURL)
            .setColor("#e3caa0")
            msg.channel.send({embed})
+		msg.react("✅");
 		}
 	if (msg.content === 'b!help') {
 	const embed = new Discord.RichEmbed()
