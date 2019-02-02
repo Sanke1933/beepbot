@@ -42,7 +42,7 @@ client.on('message', msg => {
             const embed = new Discord.RichEmbed()
            .setDescription("Вы не указали пользователя.")
            .setColor("#e3caa0")
-           return message.channel.send({embed})
+           return msg.channel.send({embed})
 }
 		const embed = new Discord.RichEmbed()
            .setDescription(`Аватар пользователя ${memberok}`)
