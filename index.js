@@ -37,8 +37,8 @@ client.on('message', msg => {
 			    msg.react("✅");
 		}
         if (msg.content === 'b!avatar') {
+		let memberok = msg.mentions.members.first();
 		if(!memberok) {
-			let memberok = msg.mentions.members.first();
             const embed = new Discord.RichEmbed()
            .setDescription("Вы не указали пользователя.")
            .setColor("#e3caa0")
