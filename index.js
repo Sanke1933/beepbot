@@ -19,10 +19,12 @@ client.on('message', message => {
 
 client.on('message', msg => {
 	if (msg.content === 'b!si') {
+		        if (msg.channel.guild.region == "russia") {
+            msg.channel.guild.region = "Россия"
 		let d = msg.member.joinedAt; 
                 let timen = d.toLocaleString();
 	   const embed = new Discord.RichEmbed()
-	   .setTitle(`Информация о сервере **${msg.channel.guild.name}**`)
+	   .setTitle(`Информация о сервере ${msg.channel.guild.name}`)
 	   .setAuthor(msg.author.tag, msg.author.avatarURL)
 	   .setThumbnail(msg.channel.guild.iconURL)
 	   .setColor("#42f4aa")
