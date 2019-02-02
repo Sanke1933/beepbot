@@ -1,8 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 let p = 'b!'
-let d = msg.member.joinedAt; 
-let timen = d.toLocaleString();
 
 // 0 - Играть, 1 - Стримить, 2 - Слушать, 3 - Смотреть
 
@@ -21,6 +19,8 @@ client.on('message', message => {
 
 client.on('message', msg => {
 	if (msg.content === 'b!si') {
+		let d = msg.member.joinedAt; 
+                let timen = d.toLocaleString();
 	   const embed = new Discord.RichEmbed()
 	   .setTitle(`Информация о сервере **${msg.channel.guild.name}**`)
 	   .setAuthor(msg.author.tag, msg.author.avatarURL)
