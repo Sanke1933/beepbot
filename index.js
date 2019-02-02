@@ -19,7 +19,7 @@ client.on('message', message => {
 
 client.on('message', msg => {
 	if (msg.content === 'b!si') {
-		        if (msg.channel.guild.region == "russia") {
+		        if (msg.channel.guild.region === "russia") {
             msg.channel.guild.region = "Россия"
 		let d = msg.member.joinedAt; 
                 let timen = d.toLocaleString();
