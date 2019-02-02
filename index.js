@@ -36,7 +36,13 @@ client.on('message', msg => {
 	   msg.channel.send({embed})
 			    msg.react("✅");
 		}
-
+        if (msg.content === 'b!avatar') {
+		let memberok = msg.mentions.members.first();
+		const embed = new Discord.RichEmbed()
+           .setTitle(`Аватар пользователя ${memberok.tag}`)
+           .setImage(memberok.avatarURL)
+           .setColor("#e3caa0")
+           msg.channel.send({embed})
 	if (msg.content === 'b!help') {
 	const embed = new Discord.RichEmbed()
 	.setAuthor("BeepBot", "https://cdn.discordapp.com/attachments/358311606699950081/541241909201469470/1_7.PNG")
