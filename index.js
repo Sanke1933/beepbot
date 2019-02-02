@@ -32,6 +32,7 @@ client.on('message', msg => {
 	   .addField('Регион сервера', message.channel.guild.region)
 	   msg.channel.send({embed})
 			    msg.react("✅")
+		
 
 client.on('message', msg => {
 	if (msg.content === 'b!help') {
