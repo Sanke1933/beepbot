@@ -27,7 +27,7 @@ client.on('message', msg => {
 	   .setTitle(`Информация о сервере ${msg.channel.guild.name}`)
 	   .setAuthor(msg.author.tag, msg.author.avatarURL)
 	   .setThumbnail(msg.channel.guild.iconURL)
-	   .setColor("#42f4aa")
+	   .setColor("#e3caa0")
 	   .addField('Вы присоединились к серверу', timen)
 	   .addField('Количество пользователей', msg.channel.guild.memberCount)
 	   .addField('Количество каналов', msg.channel.guild.channels.size)
@@ -40,7 +40,7 @@ client.on('message', msg => {
 		let memberok = msg.mentions.members.first();
 		const embed = new Discord.RichEmbed()
            .setDescription(`Аватар пользователя ${memberok}`)
-           .setImage(memberok.user.avatarURL)
+           .setImage(memberok.member.avatarURL)
            .setColor("#e3caa0")
            msg.channel.send({embed})
 		msg.react("✅");
@@ -51,7 +51,7 @@ client.on('message', msg => {
 	.addField("Информация", "``b!si`` - информация о сервере.")
 	.addField("Бот", "<@341988428457705482> (``@freezer. ⛧#4232``) - создатель бота.")
 	.setFooter(`${client.guilds.size} серверов`)
-    .setColor("#42f4aa")
+    .setColor("#e3caa0")
     msg.channel.send({embed});
 		msg.react("✅");
     };
