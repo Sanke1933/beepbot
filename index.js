@@ -42,13 +42,13 @@ client.on('message', msg => {
             const embed = new Discord.RichEmbed()
            .setDescription("Вы не указали пользователя.")
            .setColor("#e3caa0")
-           return msg.channel.send({embed})
+           return msg.channel.send({embed});
 }
 		const embed = new Discord.RichEmbed()
            .setDescription(`Аватар пользователя ${memberok}`)
            .setImage(memberok.member.avatarURL)
            .setColor("#e3caa0")
-           msg.channel.send({embed})
+           msg.channel.send({embed});
 		msg.react("✅");
 		}
 	if (msg.content === 'b!help') {
