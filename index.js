@@ -1,8 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 let p = 'b!'
-let d = message.channel.member.joinedAt;
-let timen = d.toLocaleString();
 
 // 0 - Играть, 1 - Стримить, 2 - Слушать, 3 - Смотреть
 
@@ -26,7 +24,7 @@ client.on('message', msg => {
 	   .setAuthor(message.author.tag, message.author.avatarURL)
 	   .setThumbnail(message.channel.guild.iconURL)
 	   .setColor("#42f4aa")
-	   .addField('Вы присоединились к серверу', timen)
+	   .addField('Вы присоединились к серверу', message.member.joinedAt)
 	   .addField('Количество пользователей', message.channel.guild.member.count)
 	   .addField('Количество каналов', message.channel.guild.channels.size)
 	   .addField('Количество ролей',message.channel.guild.roles.size)
