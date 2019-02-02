@@ -31,8 +31,8 @@ client.on('message', msg => {
 	   .addField('Количество ролей',message.channel.guild.roles.size)
 	   .addField('Регион сервера', message.channel.guild.region)
 	   msg.channel.send({embed})
-			    msg.react("✅")
-		
+			    msg.react("✅");
+		});
 
 client.on('message', msg => {
 	if (msg.content === 'b!help') {
