@@ -27,7 +27,7 @@ client.on('message', msg => {
 	   .setThumbnail(msg.channel.guild.iconURL)
 	   .setColor("#42f4aa")
 	   .addField('Вы присоединились к серверу', timen)
-	   .addField('Количество пользователей', msg.channel.guild.member.count)
+	   .addField('Количество пользователей', msg.channel.guild.memberCount)
 	   .addField('Количество каналов', msg.channel.guild.channels.size)
 	   .addField('Количество ролей',msg.channel.guild.roles.size)
 	   .addField('Регион сервера', msg.channel.guild.region)
