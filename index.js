@@ -21,14 +21,14 @@ client.on('message', msg => {
 	if (msg.content === 'b!si') {
 	   const embed = new Discord.RichEmbed()
 	   .setTitle(`Информация о сервере **${msg.channel.guild.name}**`)
-	   .setAuthor(message.author.tag, message.author.avatarURL)
-	   .setThumbnail(message.channel.guild.iconURL)
+	   .setAuthor(msg.author.tag, msg.author.avatarURL)
+	   .setThumbnail(msg.channel.guild.iconURL)
 	   .setColor("#42f4aa")
-	   .addField('Вы присоединились к серверу', message.member.joinedAt)
-	   .addField('Количество пользователей', message.channel.guild.member.count)
-	   .addField('Количество каналов', message.channel.guild.channels.size)
-	   .addField('Количество ролей',message.channel.guild.roles.size)
-	   .addField('Регион сервера', message.channel.guild.region)
+	   .addField('Вы присоединились к серверу', msg.member.joinedAt)
+	   .addField('Количество пользователей', msg.channel.guild.member.count)
+	   .addField('Количество каналов', msg.channel.guild.channels.size)
+	   .addField('Количество ролей',msg.channel.guild.roles.size)
+	   .addField('Регион сервера', msg.channel.guild.region)
 	   msg.channel.send({embed})
 			    msg.react("✅");
 		}
