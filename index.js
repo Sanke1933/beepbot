@@ -39,7 +39,7 @@ client.on('message', msg => {
         if (msg.content === 'b!avatar') {
 		let memberok = msg.mentions.members.first();
 		if(!memberok) {
-            memberok = message.member;
+            memberok = msg.member;
 }
 		const embed = new Discord.RichEmbed()
            .setDescription(`Аватар пользователя ${memberok}`)
