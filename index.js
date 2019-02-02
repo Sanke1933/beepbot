@@ -30,7 +30,7 @@ client.on('message', msg => {
 	   .addField('Количество каналов', message.channel.guild.channels.size)
 	   .addField('Количество ролей',message.channel.guild.roles.size)
 	   .addField('Регион сервера', message.channel.guild.region)
-	   msg.channel.send({embed)}
+	   msg.channel.send({embed})
 			    msg.react("✅")
 
 client.on('message', msg => {
