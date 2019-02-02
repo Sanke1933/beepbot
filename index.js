@@ -18,7 +18,7 @@ client.on('message', message => {
 })
 
 client.on('message', (message)=>{
-if(message.content == "+join"){
+if(message.content == "b!join"){
 	message.member.voiceChannel.join()
 const embed = new Discord.RichEmbed()
 .setDescription("Я присоединился к голосовому каналу.")
