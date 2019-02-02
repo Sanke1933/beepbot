@@ -20,7 +20,7 @@ client.on('message', message => {
 client.on('message', msg => {
 	if (msg.content === 'b!si') {
 	   const embed = new Discord.RichEmbed()
-	   .setTitle(`Информация о сервере **${message.channel.guild.name}**`)
+	   .setTitle(`Информация о сервере **${msg.channel.guild.name}**`)
 	   .setAuthor(message.author.tag, message.author.avatarURL)
 	   .setThumbnail(message.channel.guild.iconURL)
 	   .setColor("#42f4aa")
