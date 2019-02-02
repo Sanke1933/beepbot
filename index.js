@@ -41,7 +41,7 @@ client.on('message', msg => {
 	const embed = new Discord.RichEmbed()
 	.setAuthor("BeepBot", "https://cdn.discordapp.com/attachments/358311606699950081/541241909201469470/1_7.PNG")
 	.addField("Информация", "``b!si`` - информация о сервере.")
-	.addField("Бот", "<@341988428457705482> (``@freezer. ⛧#4232``) - создатель бота.\n<@406343162651738112> (``@Зан#5253``) - второй разработчик бота.")
+	.addField("Бот", "<@341988428457705482> (``@freezer. ⛧#4232``) - создатель бота.")
 	.setFooter(`${client.guilds.size} серверов`)
     .setColor("#42f4aa")
     msg.channel.send({embed});
