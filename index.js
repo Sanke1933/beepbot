@@ -40,7 +40,7 @@ client.on('message', msg => {
 		let memberok = msg.mentions.members.first();
 		const embed = new Discord.RichEmbed()
            .setDescription(`Аватар пользователя ${memberok}`)
-           .setImage(memberok.avatarURL)
+           .setImage(memberok.user.avatarURL)
            .setColor("#e3caa0")
            msg.channel.send({embed})
 		msg.react("✅");
