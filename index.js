@@ -18,9 +18,9 @@ client.on('message', message => {
 })
 
 client.on('message', (message)=>{
-if(message.content == "b!join")
-{message.member.voiceChannel.join()}
-}
+if(message.content == "+join"){
+	message.member.voiceChannel.join()}
+})
 
 client.on('message', msg => {
 	if (msg.content === 'b!help') {
