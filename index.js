@@ -19,7 +19,11 @@ client.on('message', message => {
 
 client.on('message', (message)=>{
 if(message.content == "+join"){
-	message.member.voiceChannel.join()}
+	message.member.voiceChannel.join()
+const embed = new Discord.RichEmbed()
+.setDescription("Я успешно зашел в канал")
+.setColor("#42f4aa")
+message.channel.send({embed})}
 })
 
 client.on('message', msg => {
