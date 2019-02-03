@@ -41,7 +41,7 @@
         if (msg.content.startsWith(`${p}avatar`)) {
             let userok = msg.mentions.users.first();
             if (!userok)
-                userok = msg.mentions.users.first();    
+                userok = msg.author;    
 
             const embed = new Discord.RichEmbed()
                 .setDescription(`Аватар пользователя ${userok}`)
