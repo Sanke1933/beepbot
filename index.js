@@ -56,7 +56,7 @@
         let u = message.mentions.users.first()
         let page = await r.get('https://nekos.life/api/v2/img/hug')
         const embed = new Discord.RichEmbed()
-            .setDescription(`${message.author.tag} обнял ${u.tag}`)
+            .setDescription(`${message.author} обнял ${u}`)
             .setImage(page.body.url)
             await message.channel.send(embed);
             message.react("✅");
