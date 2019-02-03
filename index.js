@@ -50,7 +50,18 @@
             await message.channel.send(embed);
             message.react("✅");
         }
-
+ 
+                if (message.content === `${p}hug`) {
+        let r = require('snekfetch')
+        let u = msg.mentions.users.first()
+        let page = await r.get('https://nekos.life/api/v2/img/hug')
+        const embed = new Discord.RichEmbed()
+            .setDescription(`${message.author.tag} обнял ${u.tag}`)
+            .setImage(page.body.url)
+            await message.channel.send(embed);
+            message.react("✅");
+        }
+        
         if (message.content === `${p}help`) {
             const embed = new Discord.RichEmbed()
                 .setAuthor("BeepBot", "https://cdn.discordapp.com/attachments/358311606699950081/541241909201469470/1_7.PNG")
