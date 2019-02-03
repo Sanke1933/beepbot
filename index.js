@@ -18,7 +18,7 @@
     });
 
     client.on('message', async msg => {
-        if (msg.content === `${p}si`) {
+        if (msg.content === `${p}serverinfo`) {
             if (msg.channel.guild.region === "russia") {
                 msg.channel.guild.region = "Россия";
             }
