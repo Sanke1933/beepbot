@@ -53,7 +53,7 @@
  
                 if (message.content === `${p}hug`) {
         let r = require('snekfetch')
-        let u = msg.mentions.users.first()
+        let u = message.mentions.users.first()
         let page = await r.get('https://nekos.life/api/v2/img/hug')
         const embed = new Discord.RichEmbed()
             .setDescription(`${message.author.tag} обнял ${u.tag}`)
