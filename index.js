@@ -54,8 +54,8 @@
         if (msg.content === `${p}help`) {
             const embed = new Discord.RichEmbed()
                 .setAuthor("BeepBot", "https://cdn.discordapp.com/attachments/358311606699950081/541241909201469470/1_7.PNG")
-                .addField("Информация", "``b!si`` - информация о сервере.")
-                .addField("Бот", "<@341988428457705482> (``@freezer. ⛧#4232``) - создатель бота.")
+                .addField("Информация", "``b!si`` - информация о сервере.\n``b!avatar`` - украсть аватарку пользователя.")
+                .addField("Бот", "<@341988428457705482> (``@freezer. ⛧#4232``) - главный разработчик.(идея, бот, аватарка, код)\n<@421030089732653057> (``zziger#8040``) - второй разработчик.(код)")
                 .setFooter(`${client.guilds.size} серверов`)
                 .setColor("#e3caa0");
             await msg.channel.send(embed);
