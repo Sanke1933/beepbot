@@ -56,13 +56,7 @@
         let u = message.mentions.users.first()
         let page = await r.get('https://nekos.life/api/v2/img/hug')
         if(!u) {
-        const embed = new Discord.RichEmbed()
-            .setDescription(`${message.author} обнял себя`)
-            .setImage(page.body.url)
-            .setColor("#e3caa0");
-            await message.channel.send(embed);
-            message.react("✅");
-            };
+       u = message.author;
         const embed = new Discord.RichEmbed()
             .setDescription(`${message.author} обнял ${u}`)
             .setImage(page.body.url)
