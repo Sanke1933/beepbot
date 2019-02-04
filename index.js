@@ -50,17 +50,16 @@
             await message.channel.send(embed);
             message.react("✅");
         }
- 
                 if (message.content === `${p}hug`) {
         let r = require('snekfetch')
-        let u = message.mentions.users.first()
         let page = await r.get('https://nekos.life/api/v2/img/hug')
-        if(!u) 
-           u = message.author;
+        let userok = message.mentions.users.first();
+        if(!userok) 
+           userok = message.author;
                     
         const embed = new Discord.RichEmbed()
             .setDescription(`${message.author} обнял ${u}`)
-            .setImage(page.body.url)
+            .setImage(`${page.body.url}`)
             .setColor("#e3caa0");
             await message.channel.send(embed);
             message.react("✅");
