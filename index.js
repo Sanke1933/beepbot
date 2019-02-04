@@ -65,6 +65,21 @@
             message.react("✅");
         }
         
+                        if (message.content.startsWith(`${p}slap`)) {
+        let r = require('snekfetch')
+        let page = await r.get('https://nekos.life/api/v2/img/slap')
+        let userok = message.mentions.users.first();
+        if(!userok) 
+           userok = message.author;
+                    
+        const embed = new Discord.RichEmbed()
+            .setDescription(`${message.author} ударил ${userok}. (ﾟΘﾟ)`)
+            .setImage(`${page.body.url}`)
+            .setColor("#e3caa0");
+            await message.channel.send(embed);
+            message.react("✅");
+        }
+        
         if (message.content === `${p}help`) {
             const embed = new Discord.RichEmbed()
                 .setAuthor("BeepBot", "https://cdn.discordapp.com/attachments/358311606699950081/541241909201469470/1_7.PNG")
