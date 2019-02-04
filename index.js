@@ -50,7 +50,7 @@
             await message.channel.send(embed);
             message.react("✅");
         }
-                if (message.content === `${p}hug`) {
+                if (message.content.startsWith(`${p}hug`)) {
         let r = require('snekfetch')
         let page = await r.get('https://nekos.life/api/v2/img/hug')
         let userok = message.mentions.users.first();
