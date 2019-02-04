@@ -23,17 +23,22 @@
                 message.channel.guild.region = "Россия";
             }
             let d = message.member.joinedAt; 
+            let g = message.guild.createdAt;
             let timen = d.toLocaleString();
+            let timeg = g.toLocaleString();
             const embed = new Discord.RichEmbed()
                 .setTitle(`Информация о сервере ${message.channel.guild.name}`)
                 .setAuthor(message.author.tag, message.author.avatarURL)
                 .setThumbnail(message.channel.guild.iconURL)
                 .setColor("#e3caa0")
+                .addField('Уровень верификации', message.channel.guild.verificationLevel)
                 .addField('Вы присоединились к серверу', timen)
+                .addField('Сервер был создан', timeg)
                 .addField('Количество пользователей', message.channel.guild.memberCount)
                 .addField('Количество каналов', message.channel.guild.channels.size)
                 .addField('Количество ролей',message.channel.guild.roles.size)
-                .addField('Регион сервера', message.channel.guild.region);
+                .addField('Регион сервера', message.channel.guild.region)
+                .addField('Акроним названия сервера', message.channel.guild.nameAcronym);
             await message.channel.send(embed);
             message.react("✅");
         }
