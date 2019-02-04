@@ -58,7 +58,7 @@
            userok = message.author;
                     
         const embed = new Discord.RichEmbed()
-            .setDescription(`${message.author} обнял ${u}`)
+            .setDescription(`${message.author} обнял ${userok}`)
             .setImage(`${page.body.url}`)
             .setColor("#e3caa0");
             await message.channel.send(embed);
